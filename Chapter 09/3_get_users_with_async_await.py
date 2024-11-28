@@ -50,6 +50,11 @@ async def main():
 if __name__ == '__main__':
     start = time()  # Записуємо початковий час виконання
     result = asyncio.run(main())  # Запускаємо основну асинхронну функцію
+# run робить під капотом
+# loop = asyncio.new_event_loop()
+# asyncio.set_event_loop(loop)
+# u = loop.run_untill_complete(main())
+# print(u)
     for r in result:  # Ітеруємося по результатах
         print(r)  # Виводимо кожного користувача
     print(time() - start)  # Виводимо загальний час виконання
